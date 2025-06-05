@@ -129,7 +129,7 @@ const Testimonials = () => {
                   </div>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 italic">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </p>
               </motion.div>
             ))}

@@ -2,34 +2,17 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { Waves } from '@/components/ui/waves-background';
 
 const Hero = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const [text, setText] = useState('');
-  const fullText = '創って魅せるWeb';
   const { theme } = useTheme();
 
   useEffect(() => {
-    if (inView) setHasAnimated(true);
+    // アニメーション用の処理が必要な場合はここに記述
   }, [inView]);
-
-  useEffect(() => {
-    let currentIndex = 0;
-    const interval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setText(fullText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 150);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">

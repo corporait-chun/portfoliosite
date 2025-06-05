@@ -9,20 +9,6 @@ const Contact = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
   const [hasAnimated, setHasAnimated] = useState(false);
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const [errors, setErrors] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-
   useEffect(() => {
     if (inView) setHasAnimated(true);
   }, [inView]);
@@ -49,60 +35,6 @@ const Contact = () => {
         stiffness: 100
       },
     },
-  };
-
-  const validateForm = () => {
-    let isValid = true;
-    const newErrors = {
-      name: '',
-      email: '',
-      message: '',
-    };
-
-    if (!formData.name.trim()) {
-      newErrors.name = '名前を入力してください';
-      isValid = false;
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = 'メールアドレスを入力してください';
-      isValid = false;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = '有効なメールアドレスを入力してください';
-      isValid = false;
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = 'メッセージを入力してください';
-      isValid = false;
-    }
-
-    setErrors(newErrors);
-    return isValid;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!validateForm()) return;
-
-    setStatus('submitting');
-
-    // 仮の送信処理（2秒待機）
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-    }, 2000);
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
   };
 
   return (
