@@ -7,21 +7,6 @@ import Image from 'next/image';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 
-// Lottieアニメーションデータ
-import reactAnimation from '../../../public/animations/react.json';
-import typescriptAnimation from '../../../public/animations/typescript.json';
-import nextjsAnimation from '../../../public/animations/nextjs.json';
-import tailwindAnimation from '../../../public/animations/tailwind.json';
-import nodejsAnimation from '../../../public/animations/nodejs.json';
-
-const lottieAnimations = {
-  react: reactAnimation,
-  typescript: typescriptAnimation,
-  nextjs: nextjsAnimation,
-  tailwind: tailwindAnimation,
-  nodejs: nodejsAnimation,
-};
-
 const skills = [
   { 
     name: 'React', 

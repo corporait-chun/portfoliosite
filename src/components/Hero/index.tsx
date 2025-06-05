@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { Waves } from '@/components/ui/waves-background';
 

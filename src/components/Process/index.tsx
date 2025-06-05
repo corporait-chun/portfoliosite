@@ -94,7 +94,7 @@ const Process = () => {
             <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 transform -translate-y-1/2" />
             
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-              {processes.map((process, index) => (
+              {processes.map((process) => (
                 <motion.div
                   key={process.title}
                   variants={itemVariants}
