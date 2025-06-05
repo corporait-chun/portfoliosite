@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const testimonials = [
   {
@@ -114,10 +115,12 @@ const Testimonials = () => {
                 className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-center mb-4">
-                  <img
+                  <Image
                     src={testimonial.image}
                     alt={testimonial.author}
-                    className="w-12 h-12 rounded-full mr-4"
+                    width={48}
+                    height={48}
+                    className="rounded-full mr-4"
                   />
                   <div>
                     <div className="font-semibold text-gray-800 dark:text-white">

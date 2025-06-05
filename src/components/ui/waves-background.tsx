@@ -15,6 +15,13 @@ interface WavesProps {
   className?: string;
 }
 
+interface Point {
+  x: number;
+  y: number;
+  wave: { x: number; y: number };
+  cursor: { x: number; y: number; vx: number; vy: number };
+}
+
 class Grad {
   x: number;
   y: number;
@@ -165,11 +172,11 @@ export function Waves({
     }
 
     function movePoints(time: number) {
-      const lines = linesRef.current;
+      const lines = linesRef.current as Point[][];
       const mouse = mouseRef.current;
       const noise = noiseRef.current;
       lines.forEach((pts) => {
-        pts.forEach((p: unknown) => {
+        pts.forEach((p: Point) => {
           const move =
             noise.perlin2(
               (p.x + time * waveSpeedX) * 0.002,
@@ -208,7 +215,7 @@ export function Waves({
       });
     }
 
-    function moved(point: any, withCursor = true) {
+    function moved(point: Point, withCursor = true) {
       const x = point.x + point.wave.x + (withCursor ? point.cursor.x : 0);
       const y = point.y + point.wave.y + (withCursor ? point.cursor.y : 0);
       return { x: Math.round(x * 10) / 10, y: Math.round(y * 10) / 10 };
@@ -220,10 +227,10 @@ export function Waves({
       ctx.clearRect(0, 0, width, height);
       ctx.beginPath();
       ctx.strokeStyle = lineColor!;
-      linesRef.current.forEach((points) => {
+      (linesRef.current as Point[][]).forEach((points) => {
         let p1 = moved(points[0], false);
         ctx.moveTo(p1.x, p1.y);
-        points.forEach((p: unknown, idx: number) => {
+        points.forEach((p: Point, idx: number) => {
           const isLast = idx === points.length - 1;
           p1 = moved(p, !isLast);
           const p2 = moved(
