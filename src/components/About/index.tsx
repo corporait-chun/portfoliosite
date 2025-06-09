@@ -93,13 +93,11 @@ const About = () => {
             className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-8"
           >
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              フルスタックエンジニアとして、Webアプリケーションの開発に携わっています。
+              Webアプリケーションの開発を得意としています。
               最新の技術を活用し、ユーザー体験を重視した開発を心がけています。
             </p>
             <p className="text-gray-600 dark:text-gray-300">
-              これまでに、スタートアップから大企業まで、様々な規模のプロジェクトに参加し、
-              成功に貢献してきました。常に新しい技術を学び、より良い解決策を提供することを
-              目指しています。
+              常に新しい技術を学び、より良い解決策を提供することを目指しています。
             </p>
           </motion.div>
           <motion.ul
