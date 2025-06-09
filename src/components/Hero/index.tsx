@@ -15,7 +15,7 @@ const Hero = () => {
   }, [inView]);
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 overflow-hidden">
       {/* 波アニメーション背景 */}
       <div className="absolute inset-0 z-0">
         <Waves
