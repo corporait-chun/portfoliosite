@@ -2,15 +2,13 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Portfolio',
   description: 'Webクリエイターのポートフォリオサイト',
-  verification: {
-    google: 'eESp3C7wsO_fyWmtx0kbdtAZ1nRZtc3NrzOveAYT8EM',
-  },
 };
 
 export default function RootLayout({
@@ -20,6 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
+      <head>
+        <meta name="google-site-verification" content="eESp3C7wsO_fyWmtx0kbdtAZ1nRZtc3NrzOveAYT8EM" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
