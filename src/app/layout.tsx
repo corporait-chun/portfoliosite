@@ -6,47 +6,10 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Chun Portfolio | フルスタックエンジニア',
-  description: 'フルスタックエンジニアのポートフォリオサイト。React、Next.js、TypeScript、Node.jsなどの技術スタックで、モダンなWebアプリケーションを開発しています。',
-  metadataBase: new URL('https://corporaitechun.com'),
-  openGraph: {
-    title: 'Chun Portfolio | フルスタックエンジニア',
-    description: 'フルスタックエンジニアのポートフォリオサイト。React、Next.js、TypeScript、Node.jsなどの技術スタックで、モダンなWebアプリケーションを開発しています。',
-    url: 'https://corporaitechun.com',
-    siteName: 'Chun Portfolio',
-    locale: 'ja_JP',
-    type: 'website',
-    images: [
-      {
-        url: '/images/ogp.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Chun Portfolio',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Chun Portfolio | フルスタックエンジニア',
-    description: 'フルスタックエンジニアのポートフォリオサイト。React、Next.js、TypeScript、Node.jsなどの技術スタックで、モダンなWebアプリケーションを開発しています。',
-    images: ['/images/ogp.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+  title: 'Portfolio',
+  description: 'Webクリエイターのポートフォリオサイト',
   verification: {
-    google: 'your-google-site-verification',
-  },
-  alternates: {
-    canonical: 'https://corporaitechun.com',
+    google: 'eESp3C7wsO_fyWmtx0kbdtAZ1nRZtc3NrzOveAYT8EM',
   },
 };
 
@@ -56,14 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja" suppressHydrationWarning>
-      <head>
-        <meta name="google-site-verification" content="eESp3C7wsO_fyWmtx0kbdtAZ1nRZtc3NrzOveAYT8EM" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#ffffff" />
-      </head>
+    <html lang="ja">
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -71,8 +27,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative flex min-h-screen w-full flex-col">
-            {children}
+          <div className="relative flex min-h-screen w-full flex-col overflow-y-auto">
+            <div className="flex-1">
+              {children}
+            </div>
           </div>
         </ThemeProvider>
       </body>
