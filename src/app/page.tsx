@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-import Contact from '@/components/Contact';
 import Projects from '@/components/Projects';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -30,7 +29,6 @@ export default async function Home() {
         <Features />
         <Projects projects={projects} />
         <Process />
-        <Contact />
       </main>
       <Footer />
     </>
