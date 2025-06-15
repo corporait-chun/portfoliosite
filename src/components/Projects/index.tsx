@@ -62,30 +62,39 @@ const Projects = ({ projects }: ProjectsProps) => {
             variants={containerVariants}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {projects.map((project) => (
-              <motion.div
-                key={project.id}
+            {Array.isArray(projects) && projects.length > 0 ? (
+              projects.map((project) => (
+                <motion.div
+                  key={project.id}
+                  variants={itemVariants}
+                  className="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden"
+                >
+                  <div className="relative h-48">
+                    <Image
+                      src={project.image.url}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 mb-4">
+                      {project.body}
+                    </p>
+                  </div>
+                </motion.div>
+              ))
+            ) : (
+              <motion.p
                 variants={itemVariants}
-                className="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden"
+                className="text-center text-gray-500 dark:text-gray-400 col-span-full"
               >
-                <div className="relative h-48">
-                  <Image
-                    src={project.image.url}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    {project.body}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                プロジェクトが見つかりませんでした。
+              </motion.p>
+            )}
           </motion.div>
         </motion.div>
       </div>

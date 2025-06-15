@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://corporaitechun.com/sitemap.xml 
+Sitemap: https://www.corporatechun.com/sitemap.xml 
