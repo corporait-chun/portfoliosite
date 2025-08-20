@@ -45,6 +45,12 @@ const Header = () => {
                 {label}
               </a>
             ))}
+            <a
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+            >
+              お問い合わせ
+            </a>
           </nav>
 
           {/* モバイルメニューボタン */}
@@ -79,6 +85,12 @@ const Header = () => {
                   {label}
                 </a>
               ))}
+              <a
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors text-center"
+              >
+                お問い合わせ
+              </a>
             </div>
           </nav>
         )}

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
+import ContactForm from '@/components/ContactForm';
 
 const Contact = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -56,19 +57,67 @@ const Contact = () => {
           >
             お問い合わせ
           </motion.h2>
+          
           <motion.div
             variants={itemVariants}
-            className="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-8"
+            className="mb-8"
           >
-            <p className="text-gray-600 dark:text-gray-300 mb-6 text-center">
+            <p className="text-gray-600 dark:text-gray-300 mb-6 text-center text-lg">
               お仕事のご依頼やご質問など、お気軽にお問い合わせください。
+              できる限り早くご返信いたします。
             </p>
-            <div className="text-center">
+          </motion.div>
+
+          <motion.div
+            variants={itemVariants}
+            className="mb-8"
+          >
+            <ContactForm />
+          </motion.div>
+
+          <motion.div
+            variants={itemVariants}
+            className="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 text-center"
+          >
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+              その他の連絡方法
+            </h3>
+                         <div className="space-y-3 text-gray-600 dark:text-gray-400 mb-6">
+               <p>
+                 <strong>メール:</strong> info@corporatechun.com
+               </p>
+              <p>
+                <strong>LinkedIn:</strong> 
+                <a 
+                  href="https://linkedin.com/in/your-profile" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 ml-2"
+                >
+                  プロフィールを見る
+                </a>
+              </p>
+              <p>
+                <strong>GitHub:</strong> 
+                <a 
+                  href="https://github.com/your-username" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 ml-2"
+                >
+                  リポジトリを見る
+                </a>
+              </p>
+            </div>
+            <div className="border-t border-gray-200 dark:border-gray-600 pt-4">
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+                より詳細なお問い合わせは専用ページをご利用ください
+              </p>
               <a
-                href="mailto:tank08161803@gmail.com"
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+                href="/contact"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors text-sm"
               >
-                tank08161803@gmail.com
+                お問い合わせページへ
               </a>
             </div>
           </motion.div>
