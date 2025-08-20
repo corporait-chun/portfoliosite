@@ -51,7 +51,7 @@ export default function ContactForm() {
         setSubmitStatus('error');
         setErrorMessage(data.error || 'エラーが発生しました');
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
       setErrorMessage('ネットワークエラーが発生しました');
     } finally {
