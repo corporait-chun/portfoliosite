@@ -32,7 +32,7 @@ export default function RootLayout({
           disableTransitionOnChange
           storageKey="portfolio-theme"
         >
-          <div className="relative flex min-h-screen w-full flex-col overflow-y-auto">
+          <div className="relative flex min-h-screen w-full flex-col">
             <div className="flex-1">
               {children}
             </div>
