@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative h-[160vh] bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 dark:from-indigo-900 dark:via-purple-900 dark:to-pink-900 pt-20">
+    <section id="hero" className="relative h-[110vh] lg:h-[170vh] bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 dark:from-indigo-900 dark:via-purple-900 dark:to-pink-900 pt-20">
       {/* グラデーション背景オーバーレイ */}
       <div className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-600/20 via-purple-600/20 to-pink-600/20"></div>
       
@@ -26,7 +26,7 @@ const Hero = () => {
               <p className="text-xl md:text-2xl text-white/90 mt-6">
                 モダンなWebアプリケーションを創造する
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8 mb-16 md:mb-24 lg:mb-32">
                 <a
                   href="#about"
                   className="inline-block bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 shadow-lg hover:shadow-xl"
@@ -35,9 +35,9 @@ const Hero = () => {
                 </a>
                 <a
                   href="/contact"
-                  className="inline-block bg-transparent border-2 border-white/40 text-white hover:bg-white/20 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 backdrop-blur-sm"
+                  className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
                 >
-                  お問い合わせ
+                  まずは相談してみる
                 </a>
               </div>
             </>
