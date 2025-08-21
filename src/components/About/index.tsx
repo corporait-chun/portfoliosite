@@ -93,11 +93,9 @@ const About = () => {
             className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-8"
           >
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Webアプリケーションの開発を得意としています。
-              最新の技術を活用し、ユーザー体験を重視した開発を心がけています。
-            </p>
-            <p className="text-gray-600 dark:text-gray-300">
-              常に新しい技術を学び、より良い解決策を提供することを目指しています。
+            私たちは Webアプリケーションとサイト制作を通じて“成果の出る体験”をデザインする 開発チームです。<br />
+            最新の技術を柔軟に取り入れつつ、ユーザー目線の設計を大切にしています。<br />
+            「シンプルに使いやすく、確実に成果が出る」――そんなプロダクトを提供し続けます。
             </p>
           </motion.div>
           <motion.ul
