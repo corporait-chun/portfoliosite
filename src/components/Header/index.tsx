@@ -1,6 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
@@ -26,9 +27,9 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 shadow-sm z-[100]">
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <a href="/" className="text-xl font-bold text-blue-600 dark:text-blue-300">
+          <Link href="/" className="text-xl font-bold text-blue-600 dark:text-blue-300">
             Corporate Chun
-          </a>
+          </Link>
 
           {/* デスクトップナビゲーション */}
           <nav className="hidden md:flex gap-4 items-center">
