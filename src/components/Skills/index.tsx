@@ -15,11 +15,7 @@ const skills = [
     items: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB'],
     icon: '⚙️'
   },
-  {
-    category: 'ツール・その他',
-    items: ['Git', 'Docker', 'AWS', 'Figma'],
-    icon: '🛠️'
-  }
+  
 ];
 
 const Skills = () => {
@@ -77,24 +73,25 @@ const Skills = () => {
             これまでに習得し、活用してきた技術をご紹介します
           </motion.p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {skills.map((skill) => (
               <motion.div
                 key={skill.category}
                 variants={itemVariants}
-                className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white dark:bg-gray-700 rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col"
               >
                 <div className="text-4xl mb-4">{skill.icon}</div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">
                   {skill.category}
                 </h3>
-                <ul className="space-y-2">
+                <ul className="space-y-3 flex-1">
                   {skill.items.map((item) => (
                     <motion.li
                       key={item}
                       variants={itemVariants}
-                      className="text-gray-600 dark:text-gray-300"
+                      className="text-gray-600 dark:text-gray-300 flex items-center"
                     >
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                       {item}
                     </motion.li>
                   ))}

@@ -56,34 +56,49 @@ const Projects = ({ projects }: ProjectsProps) => {
             variants={itemVariants}
             className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white"
           >
-            プロジェクト
+            制作実績
           </motion.h2>
           <motion.div
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 gap-8 max-w-4xl mx-auto"
           >
             {Array.isArray(projects) && projects.length > 0 ? (
               projects.map((project) => (
                 <motion.div
                   key={project.id}
                   variants={itemVariants}
-                  className="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden"
+                  className="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                 >
-                  <div className="relative h-48">
-                    <Image
-                      src={project.image.url}
-                      alt={project.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4">
-                      {project.body}
-                    </p>
+                  <div className="md:flex">
+                    <div className="relative h-64 md:h-auto md:w-1/2">
+                      <Image
+                        src={project.image.url}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-8 md:w-1/2 flex flex-col justify-center">
+                      <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                        {project.body}
+                      </p>
+                                             <div className="mt-auto">
+                         <a
+                           href="https://www.sunpla-hd.co.jp/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium transition-colors"
+                         >
+                           詳細を見る
+                           <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                           </svg>
+                         </a>
+                       </div>
+                    </div>
                   </div>
                 </motion.div>
               ))

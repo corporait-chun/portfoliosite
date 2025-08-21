@@ -11,11 +11,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* 会社情報 */}
           <div className="space-y-4">
-            <h3 className="text-white text-lg font-semibold mb-4">会社情報</h3>
             <p className="text-sm">
-              chun<br />
+              Corporate Chun<br />
               <br />
-              埼玉県さいたま市<br />
+              埼玉県蓮田市<br />
             </p>
           </div>
 
