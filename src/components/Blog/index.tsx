@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowRightIcon, BookOpenIcon } from '@heroicons/react/24/outline';
+import AdSense from '@/components/AdSense';
 
 export default function Blog() {
   return (
@@ -73,6 +74,14 @@ export default function Blog() {
               </span>
             </div>
           </div>
+        </div>
+
+        {/* AdSense広告ユニット */}
+        <div className="flex justify-center mb-8">
+          <AdSense 
+            adSlot="f08c47fec0942fa0"
+            className="max-w-md w-full"
+          />
         </div>
 
         <div className="text-center">

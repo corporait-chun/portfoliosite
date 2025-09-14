@@ -75,7 +75,21 @@ export default function PrivacyPolicyContent() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold mb-4">6. プライバシーポリシーの変更</h2>
+              <h2 className="text-2xl font-semibold mb-4">6. 広告配信について</h2>
+              <p className="text-gray-600 dark:text-gray-300">
+                当サイトでは、第三者配信の広告サービス（Google AdSense）を利用しています。
+                このような広告配信事業者は、ユーザーの興味に応じた商品やサービスの広告を表示するため、当サイトや他のサイトへのアクセスに関する情報（氏名、住所、メールアドレス、電話番号は含まれません）を使用することがあります。
+              </p>
+              <p className="text-gray-600 dark:text-gray-300 mt-2">
+                広告配信の詳細については、<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">Google広告ポリシー</a>をご確認ください。
+              </p>
+              <p className="text-gray-600 dark:text-gray-300 mt-2">
+                ユーザーは、<a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">広告設定</a>で、パーソナライズ広告を無効にできます。
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl font-semibold mb-4">7. プライバシーポリシーの変更</h2>
               <p className="text-gray-600 dark:text-gray-300">
                 当サイトは、必要に応じて本プライバシーポリシーを変更することがあります。
                 重要な変更がある場合は、サイト上でお知らせいたします。
@@ -83,7 +97,7 @@ export default function PrivacyPolicyContent() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4">7. お問い合わせ</h2>
+              <h2 className="text-2xl font-semibold mb-4">8. お問い合わせ</h2>
               <p className="text-gray-600 dark:text-gray-300">
                 本プライバシーポリシーに関するお問い合わせは、お問い合わせフォームよりご連絡ください。
               </p>
