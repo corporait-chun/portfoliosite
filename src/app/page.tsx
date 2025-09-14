@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Projects from '@/components/Projects';
+import Blog from '@/components/Blog';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Features from '@/components/Features';
@@ -28,6 +29,7 @@ export default async function Home() {
         <Skills />
         <Features />
         <Projects projects={projects} />
+        <Blog />
         <Process />
       </main>
       <Footer />
