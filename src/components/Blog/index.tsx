@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowRightIcon, BookOpenIcon } from '@heroicons/react/24/outline';
+import { XMarkIcon } from '@heroicons/react/24/solid';
 import AdSense from '@/components/AdSense';
 
 export default function Blog() {
@@ -85,18 +86,31 @@ export default function Blog() {
         </div>
 
         <div className="text-center">
-          <a
-            href="https://blog.corporatechun.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
-          >
-            <BookOpenIcon className="w-5 h-5 mr-2" />
-            ブログを読む
-            <ArrowRightIcon className="w-5 h-5 ml-2" />
-          </a>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-            新しいタブでブログサイトが開きます
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+            <a
+              href="https://blog.corporatechun.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+            >
+              <BookOpenIcon className="w-5 h-5 mr-2" />
+              ブログを読む
+              <ArrowRightIcon className="w-5 h-5 ml-2" />
+            </a>
+            
+            <a
+              href="https://x.com/corporatechun?s=21&t=zEwI5GOqdDhabAQTY9SRpw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-4 bg-black hover:bg-gray-800 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+            >
+              <XMarkIcon className="w-5 h-5 mr-2" />
+              Xでフォロー
+            </a>
+          </div>
+          
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            新しいタブでブログサイトとXアカウントが開きます
           </p>
         </div>
       </div>
