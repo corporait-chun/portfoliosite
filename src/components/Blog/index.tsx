@@ -28,7 +28,7 @@ export default function Blog({ blogData }: BlogProps) {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* ブログ記事のプレビューカード */}
-          {blogData.posts.map((post, index) => (
+          {blogData.posts.map((post) => (
             <div 
               key={post.id} 
               className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 dark:border-slate-700"
