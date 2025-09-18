@@ -9,8 +9,9 @@ import Features from '@/components/Features';
 import Skills from '@/components/Skills';
 import Process from '@/components/Process';
 import { getProjects } from '@/lib/microcms';
+import { getBlogPosts } from '@/lib/blog';
 
-export const revalidate = 3600; // 1時間ごとに再検証
+export const revalidate = 300; // 5分間隔で再検証（ISR）
 
 export const metadata: Metadata = {
   title: 'Chun Portfolio | フルスタックエンジニア',
@@ -18,7 +19,10 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-  const projects = await getProjects();
+  const [projects, blogData] = await Promise.all([
+    getProjects(),
+    getBlogPosts()
+  ]);
 
   return (
     <>
@@ -29,7 +33,7 @@ export default async function Home() {
         <Skills />
         <Features />
         <Projects projects={projects} />
-        <Blog />
+        <Blog blogData={blogData} />
         <Process />
       </main>
       <Footer />
